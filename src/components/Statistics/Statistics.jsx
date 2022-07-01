@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
+import { StatisticsBlock, StatList, StatItem, Title } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
     return (
-    <section className="statistics">
+    <StatisticsBlock>
     {title && (
-        <h2 className="title">{title}</h2>
+        <Title>{title}</Title>
       )}        
 
-        <ul className="stat-list">
+        <StatList>
             {stats.map(({ label, percentage, id }) => (
-                <li key={id} className="item">
-                    <span className="label">{label}</span>
-                    <span className="percentage">{percentage}</span>
-                </li>
+                <StatItem key={id} >
+                    <span>{label}</span>
+                    <span>{percentage}</span>
+                </StatItem>
             ))}
-        </ul>
-    </section>
+        </StatList>
+    </StatisticsBlock>
     );
 }
 
