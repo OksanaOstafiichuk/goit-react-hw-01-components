@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { StatisticsBlock, StatList, StatItem, Title } from './Statistics.styled';
 
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
     return (
     <StatisticsBlock>
     {title && (
@@ -30,5 +30,3 @@ Statistics.propTypes = {
         }),
     ),
 };
-
-export default Statistics;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { TableTransaction, TableTitle, Row, BodyTable, Type } from './TransactionHistory.styled';
 
-const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({ items }) => {
     return (
         <TableTransaction>
             <TableTitle>
@@ -35,5 +35,3 @@ TransactionHistory.propType = {
         })
     )
 }
-
-export default TransactionHistory;

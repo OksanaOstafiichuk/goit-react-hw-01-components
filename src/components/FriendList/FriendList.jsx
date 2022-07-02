@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import FriendListItem from "../FriendListItem/FriendListItem";
+import { FriendListItem } from "../FriendListItem/FriendListItem";
 import { List } from './FriendList.styled';
 
-const FriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
     return (
         <List>
             {friends.map(friend => (
@@ -19,5 +19,3 @@ FriendList.propTypes = {
         })
     )
 };
-
-export default FriendList;

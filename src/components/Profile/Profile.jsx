@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import {ProfileContainer, Avatar, Description, Name, Tag, Location, Stats, Label, Quantity, StatsItem } from './Profile.styled';
+import { ProfileContainer, Avatar, Description, Name, Tag, Location, Stats, Label, Quantity, StatsItem } from './Profile.styled';
 
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
         <ProfileContainer>
             <Description>
@@ -39,5 +39,3 @@ Profile.propTypes = {
     avatar: PropTypes.string.isRequired,
     stats: PropTypes.objectOf(PropTypes.number)
 }
-
-export default Profile;
