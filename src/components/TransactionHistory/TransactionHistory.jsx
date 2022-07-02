@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
-import { TableTransaction, TableTitle } from './TransactionHistory.styled';
+import { TableTransaction, TableTitle, Row, BodyTable, Type } from './TransactionHistory.styled';
 
 const TransactionHistory = ({ items }) => {
     return (
         <TableTransaction>
             <TableTitle>
-                <tr>
+                <Row>
                 <th>Type</th>
                 <th>Amount</th>
                 <th>Currency</th>
-                </tr>
+                </Row>
             </TableTitle>
 
-            <tbody>
+            <BodyTable>
                 {items.map(({ id, type, amount, currency }) => (
-                    <tr key={id}>
-                        <td>{type}</td>
+                    <Row key={id}>
+                        <Type>{type}</Type>
                         <td>{amount}</td>
                         <td>{currency}</td>
-                    </tr>
+                    </Row>
                 ))}
-            </tbody>
+            </BodyTable>
         </TableTransaction>
     )
 }
